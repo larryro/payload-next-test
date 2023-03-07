@@ -14,7 +14,7 @@ export default buildConfig({
       beforeLogin: [BeforeLogin],
     },
   },
-  cors: [process.env.PAYLOAD_PUBLIC_NEXT_URL],
+  // cors: [process.env.PAYLOAD_PUBLIC_NEXT_URL],
   collections: [Pages, Users, Articles, Customers],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
