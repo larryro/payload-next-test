@@ -26,7 +26,7 @@ const Customers: CollectionConfig = {
 
               // Note: Clerk stores the clientToken in a cookie
               // named "__session" for Firebase compatibility
-              const cookies = new Cookies(req, payload.res);
+              const cookies = new Cookies(req, undefined);
               const sessionToken = cookies.get('__session');
               // console.log("session token", sessionToken);
               console.log('session_id', sessionId, 'session token', sessionToken);
