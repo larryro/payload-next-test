@@ -5,6 +5,8 @@ import Pages from './collections/Pages';
 import { seedHomepage } from './collections/Pages/seed';
 import { seedUsers } from './collections/Users/seed';
 import BeforeLogin from './components/BeforeLogin';
+import Articles from './collections/Articles';
+import Customers from './collections/Customers';
 
 export default buildConfig({
   admin: {
@@ -13,7 +15,7 @@ export default buildConfig({
     },
   },
   cors: [process.env.PAYLOAD_PUBLIC_NEXT_URL],
-  collections: [Pages, Users],
+  collections: [Pages, Users, Articles, Customers],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
